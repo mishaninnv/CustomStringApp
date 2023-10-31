@@ -13,22 +13,22 @@ namespace Custstr
 	public:
 		String(const char* str);
 
-		// Конструктор копирования
+		// Copy constructor
 		String(const String& other);
 
-		// Оператор присваивания
+		// Assignment operator
 		String& operator=(const String& other);
 
-		// Move-семантика
+		// Move semantics
 		String(String&& other) noexcept;
 
-		// Оператор +=
+		// Operator +=
 		String& operator+=(const char* str);
 
-		// Внешний оператор сложения двух строк
+		// External addition operator for two strings
 		friend String operator+(const String& str1, const String& str2);
 
-		// Деструктор
+		// Destructor
 		~String();
 
 		int Length() const;
